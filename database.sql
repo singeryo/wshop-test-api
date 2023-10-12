@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `api_sample`
+-- Database: `wshop_api`
 --
-CREATE DATABASE IF NOT EXISTS `api_sample` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `api_sample`;
+CREATE DATABASE IF NOT EXISTS `wshop_api` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wshop_api`;
 
 -- --------------------------------------------------------
 
@@ -28,21 +28,20 @@ USE `api_sample`;
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `stores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`) VALUES
-(1, 'Paul', 'Doelle', 'paul@test.com'),
-(2, 'John', 'Doe', 'john@test.com');
+INSERT INTO `stores` (`id`, `name`, `address`) VALUES
+(1, 'Brico marché', '5 rue Example'),
+(2, 'Leroy Merlin', '5 rue Example');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
