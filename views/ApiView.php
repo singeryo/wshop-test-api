@@ -4,6 +4,5 @@
  * @author Paul Doelle, 29/03/15
  */
 
-class ApiView {
-	
-}
+class ApiView
+{ }
